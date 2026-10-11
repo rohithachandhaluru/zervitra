@@ -55,7 +55,7 @@ const Login = () => {
           </button>
         </div>
 
-        <div className="w-full max-w-md premium-glass rounded-3xl p-8 border border-white/5">
+        <div className="zv-card zv-card--static w-full max-w-md p-8">
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <img src="/zervimain.svg" alt="Zervitra" className="h-10 w-auto" />

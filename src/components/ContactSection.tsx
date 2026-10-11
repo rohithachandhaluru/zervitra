@@ -8,8 +8,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, Linkedin, Send, Calendar, Info } from "lucide-react";
 
 const CONTACT_EMAIL = "contact@zervitra.com";
-const CONTACT_PHONE = "+1 (555) 977-0907";
-const CONTACT_PHONE_HREF = "tel:+15559770907";
+const CONTACT_PHONE = "7288997807";
+const CONTACT_PHONE_HREF = "tel:+917288997807";
 const LINKEDIN_URL = "https://www.linkedin.com/company/zervitra/home/";
 
 interface FormState {
@@ -129,7 +129,7 @@ const ContactSection = () => {
             </div>
 
             {/* Schedule CTA */}
-            <div className="premium-glass rounded-2xl p-6 border border-primary/10">
+            <div className="zv-card p-6">
               <Calendar className="w-8 h-8 text-primary mb-3" />
               <h4 className="text-lg font-bold text-foreground mb-2">Schedule a Free Call</h4>
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -156,7 +156,7 @@ const ContactSection = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-3"
           >
-            <div className="premium-glass rounded-3xl p-8 border border-white/5">
+            <div className="zv-card zv-card--static p-8">
               {/* Frontend-only notice */}
               <div className="flex items-start gap-3 bg-primary/5 border border-primary/15 rounded-xl p-4 mb-7">
                 <Info className="w-4 h-4 text-primary shrink-0 mt-0.5" />
@@ -208,7 +208,7 @@ const ContactSection = () => {
                         onChange={(e) => handleChange("name", e.target.value)}
                         aria-describedby={errors.name ? "contact-name-err" : undefined}
                         aria-invalid={!!errors.name}
-                        className="bg-background/50 border-border/30 focus:border-primary/50 rounded-xl"
+                        className="bg-white border-border focus:border-primary/60 rounded-xl"
                       />
                       {errors.name && (
                         <p id="contact-name-err" role="alert" className="text-xs text-destructive">{errors.name}</p>
@@ -228,7 +228,7 @@ const ContactSection = () => {
                         onChange={(e) => handleChange("email", e.target.value)}
                         aria-describedby={errors.email ? "contact-email-err" : undefined}
                         aria-invalid={!!errors.email}
-                        className="bg-background/50 border-border/30 focus:border-primary/50 rounded-xl"
+                        className="bg-white border-border focus:border-primary/60 rounded-xl"
                       />
                       {errors.email && (
                         <p id="contact-email-err" role="alert" className="text-xs text-destructive">{errors.email}</p>
@@ -245,7 +245,7 @@ const ContactSection = () => {
                       id="contact-service"
                       value={form.service}
                       onChange={(e) => handleChange("service", e.target.value)}
-                      className="w-full h-10 rounded-xl bg-background/50 border border-border/30 focus:border-primary/50 text-sm text-foreground px-3 outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
+                      className="w-full h-10 rounded-xl bg-white border border-border focus:border-primary/60 text-sm text-foreground px-3 outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
                     >
                       <option value="">Select a service or topic…</option>
                       {SERVICE_OPTIONS.map((s) => (
@@ -267,7 +267,7 @@ const ContactSection = () => {
                       aria-describedby={errors.message ? "contact-msg-err" : undefined}
                       aria-invalid={!!errors.message}
                       rows={5}
-                      className="bg-background/50 border-border/30 focus:border-primary/50 rounded-xl resize-none"
+                      className="bg-white border-border focus:border-primary/60 rounded-xl resize-none"
                     />
                     {errors.message && (
                       <p id="contact-msg-err" role="alert" className="text-xs text-destructive">{errors.message}</p>

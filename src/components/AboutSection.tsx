@@ -86,7 +86,7 @@ const AboutSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="premium-glass rounded-2xl p-5 border border-white/5 hover:border-primary/20 transition-all duration-300 group"
+              className="zv-card p-5 group"
             >
               <div className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center mb-3 text-primary group-hover:bg-primary/25 transition-colors duration-300">
                 {v.icon}

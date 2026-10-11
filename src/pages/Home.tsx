@@ -32,30 +32,30 @@ const Home = () => (
       {/* Hero */}
       <Hero />
 
-      {/* Services */}
-      <section className="relative py-24">
+      {/* Services — alternate bg */}
+      <section className="relative py-24 bg-muted">
         <OurServices />
       </section>
 
-      {/* Portfolio */}
+      {/* Portfolio — white */}
       <Portfolio />
 
-      {/* Process */}
+      {/* Process — alternate bg */}
       <WavyFlow />
 
-      {/* About */}
+      {/* About — white */}
       <AboutSection />
 
-      {/* Team */}
+      {/* Team — alternate bg */}
       <Team />
 
-      {/* AI */}
+      {/* AI — white */}
       <AISection />
 
-      {/* FAQ */}
+      {/* FAQ — alternate bg */}
       <FAQ />
 
-      {/* Contact */}
+      {/* Contact — white */}
       <ContactSection />
 
       {/* Footer */}

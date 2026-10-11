@@ -60,7 +60,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: index * 0.1 }}
-    className="premium-glass rounded-3xl overflow-hidden border border-white/5 hover:border-primary/20 transition-all duration-500 group flex flex-col"
+    className="zv-card group flex flex-col"
   >
     {/* Screenshot */}
     <div className="relative overflow-hidden aspect-[16/9] bg-background/50">
@@ -70,7 +70,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       {/* View Project overlay */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <a

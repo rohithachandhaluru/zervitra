@@ -82,7 +82,7 @@ const ProcessSection = () => {
   return (
     <section
       id="process"
-      className="py-24 px-4 sm:px-6 lg:px-8 border-t border-border/20"
+      className="py-24 px-4 sm:px-6 lg:px-8 border-t border-border/20 bg-muted"
       aria-label="Our Process"
     >
       <div className="max-w-7xl mx-auto">
@@ -136,11 +136,7 @@ const ProcessSection = () => {
                 aria-hidden={!isActive}
               >
                 <div
-                  className={`rounded-3xl p-7 border transition-colors duration-300 h-full ${
-                    isActive
-                      ? "bg-card border-primary/40 shadow-[0_0_40px_-8px_hsl(var(--primary)/0.35)]"
-                      : "premium-glass border-white/5"
-                  }`}
+                  className={`zv-card p-7 h-full ${isActive ? "zv-card--active" : ""}`}
                 >
                   {/* Header row */}
                   <div className="flex items-center justify-between mb-5">
@@ -153,14 +149,14 @@ const ProcessSection = () => {
                   {/* Icon */}
                   <div
                     className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
-                      isActive ? "bg-primary/15" : "bg-white/5"
+                      isActive ? "bg-primary/15" : "bg-border/60"
                     }`}
                   >
                     <Icon className={`w-7 h-7 ${isActive ? "text-primary" : "text-muted-foreground/60"}`} />
                   </div>
 
                   {/* Stage number */}
-                  <div className={`text-5xl font-black mb-2 ${isActive ? "text-primary/20" : "text-white/8"}`}>
+                  <div className={`text-5xl font-black mb-2 ${isActive ? "text-primary/20" : "text-foreground/8"}`}>
                     {stage.num}
                   </div>
 
@@ -193,14 +189,14 @@ const ProcessSection = () => {
 
         {/* Mobile: single-card stack */}
         <div className="md:hidden">
-          <div className="relative overflow-hidden rounded-3xl">
+          <div className="relative overflow-hidden rounded-2xl">
             <motion.div
               key={activeIdx}
               initial={reducedMotion ? {} : { opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               exit={reducedMotion ? {} : { opacity: 0, x: -40 }}
               transition={{ duration: 0.3 }}
-              className="bg-card border border-primary/30 rounded-3xl p-7 shadow-[0_0_30px_-8px_hsl(var(--primary)/0.3)]"
+              className="zv-card zv-card--active p-7"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-5">
@@ -258,7 +254,7 @@ const ProcessSection = () => {
                   className={`rounded-full transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary/50 outline-none ${
                     i === activeIdx
                       ? "w-8 h-2.5 bg-primary"
-                      : "w-2.5 h-2.5 bg-white/20 hover:bg-white/40"
+                      : "w-2.5 h-2.5 bg-border hover:bg-muted-foreground/40"
                   }`}
                 />
               ))}

@@ -23,11 +23,7 @@ const FloatingCard = ({ title, icon, description, deliverables, className = "" }
 
   return (
     <div
-      className={`group relative z-10 premium-glass rounded-3xl p-6 w-72 lg:w-80
-                 shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.15)]
-                 hover:shadow-[0_30px_80px_-10px_hsl(var(--primary)/0.25)]
-                 border border-white/10 hover:border-primary/30
-                 transition-all duration-500 ease-out hover:-translate-y-1 ${className}`}
+      className={`zv-card group z-10 p-6 w-72 lg:w-80 ${className}`}
     >
       {/* Icon */}
       <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-primary/30 to-accent/20
@@ -58,8 +54,6 @@ const FloatingCard = ({ title, icon, description, deliverables, className = "" }
         ))}
       </ul>
 
-      {/* Glossy overlay */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/15 via-transparent to-primary/5 pointer-events-none group-hover:from-white/25 transition-all duration-500" />
     </div>
   );
 };

@@ -39,20 +39,8 @@ const TeamCard = ({ member, index }: { member: typeof TEAM_MEMBERS[0]; index: nu
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-    className="group relative flex flex-col items-center rounded-2xl border border-white/8 bg-[hsl(263_70%_6%)] overflow-hidden hover:border-primary/30 transition-all duration-500"
-    style={{
-      boxShadow: "0 0 0 0 hsl(var(--primary)/0)",
-    }}
+    className="zv-card group flex flex-col items-center"
   >
-    {/* Purple radial glow behind the character */}
-    <div
-      className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 pointer-events-none"
-      style={{
-        background:
-          "radial-gradient(ellipse 70% 60% at 50% 30%, hsl(var(--primary)/0.35) 0%, transparent 70%)",
-      }}
-    />
-
     {/* Portrait */}
     <div className="relative w-full flex justify-center pt-6 pb-0">
       <img
@@ -75,7 +63,7 @@ const TeamCard = ({ member, index }: { member: typeof TEAM_MEMBERS[0]; index: nu
 );
 
 const Team = () => (
-  <section id="team" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-border/20">
+  <section id="team" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-border/20 bg-muted">
     <div className="max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

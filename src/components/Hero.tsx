@@ -1,16 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Calendar, ArrowDown, ChevronRight } from "lucide-react";
-
-const PHONE_DISPLAY = "+1 (555) 977-0907";
-const PHONE_HREF = "tel:+15559770907";
-
-const scrollTo = (id: string) => {
-  const el = document.getElementById(id);
-  if (el) {
-    const top = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: "smooth" });
-  }
-};
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => (
   <section
@@ -99,7 +88,7 @@ const Hero = () => (
         </h1>
 
         <motion.p
-          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.7 }}
@@ -108,40 +97,6 @@ const Hero = () => (
           designed to help businesses move forward.
         </motion.p>
 
-        {/* CTAs */}
-        <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.7 }}
-        >
-          {/* Primary: Call Us */}
-          <a
-            href={PHONE_HREF}
-            className="inline-flex items-center gap-2.5 bg-primary text-primary-foreground px-7 py-3.5 rounded-full font-semibold text-base hover:bg-primary/90 transition-all duration-300 shadow-[0_4px_24px_-6px_hsl(var(--primary)/0.6)] hover:shadow-[0_8px_32px_-6px_hsl(var(--primary)/0.7)] hover:-translate-y-0.5 group"
-          >
-            <Phone className="w-4 h-4 group-hover:animate-pulse" />
-            Call Us: {PHONE_DISPLAY}
-          </a>
-
-          {/* Secondary: Schedule a Call (scrolls to contact) */}
-          <button
-            onClick={() => scrollTo("contact")}
-            className="inline-flex items-center gap-2.5 bg-white/5 border border-white/15 text-foreground px-7 py-3.5 rounded-full font-semibold text-base hover:bg-white/10 hover:border-white/25 transition-all duration-300 hover:-translate-y-0.5"
-          >
-            <Calendar className="w-4 h-4" />
-            Schedule a Call
-          </button>
-
-          {/* Tertiary: Explore Our Work */}
-          <button
-            onClick={() => scrollTo("portfolio")}
-            className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 transition-colors text-sm font-medium underline-offset-4 hover:underline"
-          >
-            Explore Our Work
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </motion.div>
       </motion.div>
 
       {/* Scroll hint */}
@@ -152,7 +107,7 @@ const Hero = () => (
         transition={{ delay: 1.2 }}
       >
         <span className="text-xs text-muted-foreground/50 tracking-widest uppercase">Scroll</span>
-        <div className="w-6 h-10 rounded-full border border-white/15 flex items-start justify-center pt-1.5">
+        <div className="w-6 h-10 rounded-full border border-border flex items-start justify-center pt-1.5">
           <motion.div
             className="w-1 h-2 bg-primary rounded-full"
             animate={{ y: [0, 12, 0] }}

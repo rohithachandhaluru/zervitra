@@ -51,10 +51,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || mobileOpen
-          ? "bg-background/95 backdrop-blur-md border-b border-border/20 shadow-lg"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#171326] border-b border-white/10 ${
+        scrolled || mobileOpen ? "shadow-lg shadow-black/20" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,7 +68,7 @@ const Navbar = () => {
               <button
                 key={id}
                 onClick={() => handleNavClick(id)}
-                className="text-sm text-nav-text hover:text-foreground transition-colors duration-200 font-medium"
+                className="text-sm text-white/70 hover:text-white transition-colors duration-200 font-medium"
               >
                 {label}
               </button>
@@ -84,13 +82,13 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Zervitra on LinkedIn"
-              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+              className="flex items-center gap-1.5 text-sm text-white/70 hover:text-violet-300 transition-colors"
             >
               <Linkedin className="w-4 h-4" />
               <span className="hidden xl:inline">LinkedIn</span>
             </a>
             <Link to="/login">
-              <Button variant="ghost" size="sm" className="text-nav-text hover:text-foreground">
+              <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                 Login
               </Button>
             </Link>
@@ -103,7 +101,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+            className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -115,29 +113,29 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-border/20 bg-background/98 backdrop-blur-md">
+        <div className="lg:hidden border-t border-white/10 bg-[#171326]">
           <nav className="flex flex-col px-4 py-4 gap-1" aria-label="Mobile navigation">
             {NAV_LINKS.map(({ label, id }) => (
               <button
                 key={id}
                 onClick={() => handleNavClick(id)}
-                className="text-left py-2.5 px-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors"
+                className="text-left py-2.5 px-3 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
               >
                 {label}
               </button>
             ))}
-            <div className="border-t border-border/20 mt-3 pt-3 flex flex-col gap-2">
+            <div className="border-t border-white/10 mt-3 pt-3 flex flex-col gap-2">
               <a
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 py-2.5 px-3 text-sm text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-white/5"
+                className="flex items-center gap-2 py-2.5 px-3 text-sm text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/10"
               >
                 <Linkedin className="w-4 h-4" />
                 LinkedIn
               </a>
               <Link to="/login" onClick={() => setMobileOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start text-muted-foreground">
+                <Button variant="ghost" className="w-full justify-start text-white/80 hover:text-white hover:bg-white/10">
                   Login
                 </Button>
               </Link>

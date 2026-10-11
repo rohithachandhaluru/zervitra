@@ -56,7 +56,7 @@ const AISection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group premium-glass rounded-2xl p-7 border border-white/5 hover:border-primary/20 transition-all duration-400 flex flex-col"
+              className="zv-card group p-7 flex flex-col"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-xl bg-primary/12 flex items-center justify-center mb-5 text-primary group-hover:bg-primary/22 transition-colors duration-300">

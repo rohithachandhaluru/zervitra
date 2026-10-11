@@ -15,12 +15,8 @@ const ServiceCard = ({ title, description, icon, bullets, index }: ServiceCardPr
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-80px" }}
     transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-    whileHover={{ y: -6, transition: { duration: 0.3 } }}
-    className="group relative premium-glass rounded-3xl p-8
-               shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.1)]
-               hover:shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.25)]
-               border border-white/5 hover:border-primary/20
-               transition-all duration-500 ease-out"
+    whileHover={{ y: -4, transition: { duration: 0.3 } }}
+    className="zv-card group p-8"
   >
     {/* Icon */}
     <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10
@@ -45,8 +41,6 @@ const ServiceCard = ({ title, description, icon, bullets, index }: ServiceCardPr
       ))}
     </ul>
 
-    {/* Glossy overlay */}
-    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 via-transparent to-primary/5 pointer-events-none group-hover:from-white/15 transition-all duration-500" />
   </motion.div>
 );
 

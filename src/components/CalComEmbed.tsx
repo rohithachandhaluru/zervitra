@@ -104,7 +104,7 @@ const CalComEmbed = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-16"
           >
-            <div className="premium-glass rounded-3xl p-8 max-w-4xl mx-auto">
+            <div className="zv-card zv-card--static p-8 max-w-4xl mx-auto">
               {/* Cal.com inline embed will be added here */}
               <div className="min-h-[600px] flex items-center justify-center bg-muted/20 rounded-2xl">
                 <div className="text-center">
